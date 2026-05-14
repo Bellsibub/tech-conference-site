@@ -4,3 +4,6 @@ coverage
 
 # Ignore all HTML files:
 **/*.html
+
+# ignore generated route file
+**/routeTree.gen.ts
