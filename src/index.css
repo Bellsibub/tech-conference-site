@@ -1,1 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 @import 'tailwindcss';
+
+@theme {
+    --color-neutral-900: #00151d;
+    --color-neutral-800: #001a24;
+    --color-neutral-600: #33444a;
+    --color-neutral-500: #49616a;
+    --color-neutral-200: #c2c5c2;
+    --color-neutral-100: #fcefe8;
+
+    --color-green-200: #d1ff66;
+
+    --color-yellow-100: #ffe6ba;
+
+    --color-red-300: #ff8080;
+    --color-red-100: #fec9c3;
+
+    --color-cyan-100: #b5e9fc;
+
+    --color-purple-100: #ccc4fd;
+
+    --color-blue-100: #bbd8ff;
+
+    --font-primary: 'Chakra Petch', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --spacing-0: 0px;
+    --spacing-025: 2px;
+    --spacing-050: 4px;
+    --spacing-075: 6px;
+    --spacing-100: 8px;
+    --spacing-125: 10px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-250: 20px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-1000: 80px;
+    --spacing-1200: 96px;
+    --spacing-1400: 112px;
+    --spacing-1600: 128px;
+    --spacing-1800: 140px;
+
+    --radius-4: 4px;
+    --radius-6: 6px;
+    --radius-8: 8px;
+    --radius-10: 10px;
+    --radius-12: 12px;
+    --radius-16: 16px;
+    --radius-20: 20px;
+    --radius-24: 24px;
+}
+
+@layer base {
+    body {
+        @apply bg-neutral-900 text-neutral-900;
+    }
+}
+
+@layer components {
+    .text-1 {
+        @apply font-primary text-[38px] leading-[100%] font-bold tracking-[-2px] md:text-[80px];
+    }
+
+    .text-2 {
+        @apply font-primary text-[24px] leading-[110%] font-bold tracking-normal md:text-[28px] lg:text-[32px] lg:leading-[120%];
+    }
+
+    .text-3 {
+        @apply font-primary text-[24px] leading-[130%] font-semibold tracking-normal;
+    }
+
+    .text-4 {
+        @apply font-primary text-[20px] leading-[140%] font-bold tracking-normal;
+    }
+
+    .text-5 {
+        @apply font-mono text-[16px] leading-[140%] font-normal tracking-normal;
+    }
+    .text-5-bold {
+        @apply font-mono text-[16px] leading-[140%] font-bold tracking-normal;
+    }
+    .text-6 {
+        @apply font-mono text-[14px] leading-[140%] font-normal tracking-normal;
+    }
+    .text-6-medium {
+        @apply font-mono text-[14px] leading-[140%] font-medium tracking-normal;
+    }
+    .text-6-extrabold {
+        @apply font-mono text-[14px] leading-[140%] font-extrabold tracking-normal;
+    }
+    .text-7 {
+        @apply font-mono text-[12px] leading-[140%] font-normal tracking-[0.5px];
+    }
+}

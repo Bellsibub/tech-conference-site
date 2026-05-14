@@ -57,103 +57,103 @@ A `data.json` file is provided with the conference content used across all three
 
 ```json
 {
-  "conference": {
-    "name": "DevHorizon 2026",
-    "brandCode": "DEVHORIZON_26",
-    "tagline": "where code meets the machine_",
-    "startDate": "2026-11-15",
-    "endDate": "2026-11-17",
-    "location": {
-      "venue": "Pier 70",
-      "city": "San Francisco",
-      "cityAbbreviation": "SF",
-      "state": "CA"
-    }
-  },
-  "tracks": [
-    {
-      "id": "tr_1",
-      "name": "Frontend",
-      "description": "Building modern interfaces for the web",
-      "color": "#FFE6BA"
-    }
-  ],
-  "speakers": [
-    {
-      "id": "sp_0",
-      "name": "Elena Vasquez",
-      "role": "Principal Frontend Engineer",
-      "company": "Bytecraft",
-      "avatar": "./assets/images/avatar-elena-vasquez.webp",
-      "bio": "Elena has spent the last decade...",
-      "featured": true
-    }
-  ],
-  "talks": [
-    {
-      "id": "tk_0",
-      "title": "The Next Frontier of Web Development",
-      "speakerId": "sp_0",
-      "day": 1,
-      "trackId": "tr_0",
-      "startTime": "9:00",
-      "endTime": "10:00",
-      "location": "Room A",
-      "description": "The opening keynote...",
-      "highlighted": false
-    }
-  ]
+    "conference": {
+        "name": "DevHorizon 2026",
+        "brandCode": "DEVHORIZON_26",
+        "tagline": "where code meets the machine_",
+        "startDate": "2026-11-15",
+        "endDate": "2026-11-17",
+        "location": {
+            "venue": "Pier 70",
+            "city": "San Francisco",
+            "cityAbbreviation": "SF",
+            "state": "CA"
+        }
+    },
+    "tracks": [
+        {
+            "id": "tr_1",
+            "name": "Frontend",
+            "description": "Building modern interfaces for the web",
+            "color": "#FFE6BA"
+        }
+    ],
+    "speakers": [
+        {
+            "id": "sp_0",
+            "name": "Elena Vasquez",
+            "role": "Principal Frontend Engineer",
+            "company": "Bytecraft",
+            "avatar": "./assets/images/avatar-elena-vasquez.webp",
+            "bio": "Elena has spent the last decade...",
+            "featured": true
+        }
+    ],
+    "talks": [
+        {
+            "id": "tk_0",
+            "title": "The Next Frontier of Web Development",
+            "speakerId": "sp_0",
+            "day": 1,
+            "trackId": "tr_0",
+            "startTime": "9:00",
+            "endTime": "10:00",
+            "location": "Room A",
+            "description": "The opening keynote...",
+            "highlighted": false
+        }
+    ]
 }
 ```
 
 #### Conference properties
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `name` | string | Display name of the conference |
+| Property    | Type   | Description                                                            |
+| ----------- | ------ | ---------------------------------------------------------------------- |
+| `name`      | string | Display name of the conference                                         |
 | `brandCode` | string | Logo/brand code shown in the header and footer (e.g., `DEVHORIZON_26`) |
-| `tagline` | string | Hero heading text |
-| `startDate` | string | First day of the conference in `YYYY-MM-DD` format |
-| `endDate` | string | Last day of the conference in `YYYY-MM-DD` format |
-| `location` | object | Venue and city details |
+| `tagline`   | string | Hero heading text                                                      |
+| `startDate` | string | First day of the conference in `YYYY-MM-DD` format                     |
+| `endDate`   | string | Last day of the conference in `YYYY-MM-DD` format                      |
+| `location`  | object | Venue and city details                                                 |
 
 #### Track properties
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `id` | string | Unique identifier for each track |
-| `name` | string | Display name of the track |
-| `description` | string | Short description shown on the home page tracks section |
-| `color` | string | Hex color used for the track's background on talk cards, speaker cards, and the modal speaker photo |
+| Property      | Type   | Description                                                                                         |
+| ------------- | ------ | --------------------------------------------------------------------------------------------------- |
+| `id`          | string | Unique identifier for each track                                                                    |
+| `name`        | string | Display name of the track                                                                           |
+| `description` | string | Short description shown on the home page tracks section                                             |
+| `color`       | string | Hex color used for the track's background on talk cards, speaker cards, and the modal speaker photo |
 
 The `Keynote` track is treated as a special track. It powers the featured keynote on the home page and should be excluded from the tracks listings shown in the home page tracks section, the footer tracks list, and the schedule track filters.
 
 #### Speaker properties
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `id` | string | Unique identifier for each speaker |
-| `name` | string | Speaker's full name |
-| `role` | string | Speaker's job title |
-| `company` | string | Company the speaker works at |
-| `avatar` | string | Relative path to the speaker's avatar image |
-| `bio` | string | Full bio shown in the speaker modal |
+| Property   | Type    | Description                                                             |
+| ---------- | ------- | ----------------------------------------------------------------------- |
+| `id`       | string  | Unique identifier for each speaker                                      |
+| `name`     | string  | Speaker's full name                                                     |
+| `role`     | string  | Speaker's job title                                                     |
+| `company`  | string  | Company the speaker works at                                            |
+| `avatar`   | string  | Relative path to the speaker's avatar image                             |
+| `bio`      | string  | Full bio shown in the speaker modal                                     |
 | `featured` | boolean | Whether to include this speaker in the home page Featured Speakers grid |
 
 #### Talk properties
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `id` | string | Unique identifier for each talk |
-| `title` | string | Talk title |
-| `speakerId` | string | The `id` of the speaker giving this talk |
-| `day` | number | Conference day the talk takes place on (`1`, `2`, or `3`) |
-| `trackId` | string | The `id` of the track this talk belongs to |
-| `startTime` | string | Start time in 24-hour `H:MM` format |
-| `endTime` | string | End time in 24-hour `H:MM` format |
-| `location` | string | Room the talk is held in |
-| `description` | string | Talk description shown when the user expands a schedule item or opens the speaker modal |
-| `highlighted` | boolean | Whether to include this talk in the home page Schedule Highlights section |
+| Property      | Type    | Description                                                                             |
+| ------------- | ------- | --------------------------------------------------------------------------------------- |
+| `id`          | string  | Unique identifier for each talk                                                         |
+| `title`       | string  | Talk title                                                                              |
+| `speakerId`   | string  | The `id` of the speaker giving this talk                                                |
+| `day`         | number  | Conference day the talk takes place on (`1`, `2`, or `3`)                               |
+| `trackId`     | string  | The `id` of the track this talk belongs to                                              |
+| `startTime`   | string  | Start time in 24-hour `H:MM` format                                                     |
+| `endTime`     | string  | End time in 24-hour `H:MM` format                                                       |
+| `location`    | string  | Room the talk is held in                                                                |
+| `description` | string  | Talk description shown when the user expands a schedule item or opens the speaker modal |
+| `highlighted` | boolean | Whether to include this talk in the home page Schedule Highlights section               |
 
 ### Data Persistence
 
@@ -225,7 +225,7 @@ We've included two files to help you if you're using AI coding assistants (like 
 
 **How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+**Note:** These files are designed to help you _learn_, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
 
 ## Building your project
 
@@ -268,12 +268,12 @@ Remember, if you're looking for feedback on your solution, be sure to ask questi
 
 There are multiple places you can share your solution:
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
+1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community).
 2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
 3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
 4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
 
 The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
 
